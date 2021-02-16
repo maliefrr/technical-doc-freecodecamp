@@ -13,7 +13,7 @@
             <li><a href="#intro">Introduction</a></li>
             <li><a href="#hello-world">Hello World</a></li>
             <li><a href="#variable">Variables</a></li>
-            <li><a href="">Data Type</a></li>
+            <li><a href="#data-type">Data Type</a></li>
             <li><a href="">if else</a></li>
             <li><a href="">Loop</a></li>
         </ul>
@@ -97,6 +97,284 @@
                 a = 5 <br>
                 a = High five
             </code>
+        </section>
+        <section class="main-section" id="data-type">
+            <header><h1>Data Type</h1></header>
+            <article>
+                <p>
+                    Every value in Python has a datatype. Since everything is an object in Python programming, 
+                    data types are actually classes and variables are instance (object) of these classes.
+                </p>
+                <p>
+                    There are various data types in Python. Some of the important types are listed below.
+                </p>
+            </article>
+            <ul>
+                <li><h3>Python Numbers</h3></li>
+                <article>
+                    <p>
+                        Integers, floating point numbers and complex numbers fall under Python numbers category. 
+                        They are defined as <code>int</code>,<code>float</code> and <code>complex</code> classes in python.
+                    </p>
+                    <p>
+                        We can use the <code>type()</code> function to know which class a variable or a value belongs to. Similarly, the
+                        <code>isinstance()</code> function.is used to check if an object belongs to a particular class. 
+                    </p>
+                    <code>
+                        a = 5 <br>
+                        print(a, "is of type", type(a)) <br>
+                        <br>
+                        a = 2.0 <br>
+                        print(a, "is of type", type(a)) <br>
+                        <br>
+                        a = 1+2j <br>
+                        print(a, "is complex number?", isinstance(1+2j,complex))
+                    </code>
+                    <h4>Output</h4>
+                    <code>
+                        5 is of type &#10092;class 'int'&#10093; <br>
+                            2.0 is of type &#10092;class 'float'&#10093; <br>
+                            (1+2j) is complex number? True
+                    </code>
+                    <p>
+                        Integers can be of any length, it is only limited by the memory available.
+                    </p>
+                    <p>
+                        A floating-point number is accurate up to 15 decimal places. Integer and floating 
+                        points are separated by decimal points.<code>1</code> is an integer, <code>1.0</code>
+                        is a floating-point number.  
+                    </p>
+                    <p>
+                        Complex numbers are written in the form,<code>x + yj</code>, where <code>x</code> is the real part and 
+                        <code>y</code> is the imaginary part. Here are some examples. 
+                    </p>
+                    <code>
+                        >>> a = 1234567890123456789 <br>
+                        >>> a <br>
+                        1234567890123456789 <br>
+                        >>> b = 0.1234567890123456789 <br>
+                        >>> b <br>
+                        0.12345678901234568 <br>
+                        >>> c = 1+2j <br>
+                        >>> c <br>
+                        (1+2j)
+                    </code>
+                    <p>
+                        Notice that the <code>float</code> variable <code>b</code> got truncated.
+                    </p>
+                </article>
+                <li><h3>Python List</h3></li>
+                <article>
+                    <p>
+                        List is an ordered sequence of items. It is one of the most used datatype in Python 
+                        and is very flexible. All the items in a list do not need to be of the same type.
+                    </p>
+                    <p>
+                        Declaring a list is pretty straight forward. Items separated by commas are enclosed 
+                        within brackets <code>[ ]</code>
+                    </p>
+                    <code>a = [1, 2.2, 'python']</code>
+                    <p>
+                        We can use the slicing operator <code>[ ]</code> to extract an item or a range of items 
+                        from a list. The index starts from 0 in Python.
+                    </p>
+                    <code>
+                        a = [5,10,15,20,25,30,35,40] <br>
+                        <br>
+                        # a[2] = 15 <br>
+                        print("a[2] = ", a[2]) <br>
+                        <br>
+                        # a[0:3] = [5, 10, 15] <br>
+                        print("a[0:3] = ", a[0:3]) <br>
+                        <br>
+                        # a[5:] = [30, 35, 40] <br>
+                        print("a[5:] = ", a[5:])
+                    </code>
+                    <h4>Output</h4>
+                    <code>
+                        a[2] =  15 <br>
+                        a[0:3] =  [5, 10, 15] <br>
+                        a[5:] =  [30, 35, 40]
+                    </code>
+                    <p>Lists are mutable, meaning, the value of elements of a list can be altered.</p>
+                    <code>
+                        a = [1, 2, 3] <br>
+                        a[2] = 4 <br>
+                        print(a)
+                    </code>
+                    <h4>Output</h4>
+                    <code>[1,2,4]</code>
+                </article>
+                <li><h3>Python Tuple</h3></li>
+                <article>
+                    <p>
+                        Tuple is an ordered sequence of items same as a list. The only difference is 
+                        that tuples are immutable. Tuples once created cannot be modified.
+                    </p>
+                    <p>
+                        Tuples are used to write-protect data and are usually faster than lists as they 
+                        cannot change dynamically.
+                    </p>
+                    <p>It is defined within parentheses <code>()</code> where items are separated by commas.</p>
+                    <code>
+                        t = (5,'program', 1+3j)
+                    </code>
+                    <p>
+                        We can use the slicing operator <code>[ ]</code> to extract items but we cannot change its value.
+                    </p>
+                    <code>
+                        t = (5,'program', 1+3j) <br>
+                        <br>
+                        # t[1] = 'program' <br>
+                        print("t[1] = ", t[1]) <br>
+                        <br>
+                        # t[0:3] = (5, 'program', (1+3j)) <br>
+                        print("t[0:3] = ", t[0:3]) <br>
+                        <br>
+                        # Generates error <br>
+                        # Tuples are immutable <br>
+                        t[0] = 10
+                    </code>
+                    <h4>Output</h4>
+                    <code>
+                        t[1] =  program <br>
+                        t[0:3] =  (5, 'program', (1+3j)) <br>
+                        Traceback (most recent call last): <br>
+                            File "test.py", line 11, in &#10092;module&#10093; <br>
+                                t[0] = 10 <br>
+                        TypeError: 'tuple' object does not support item assignment
+                    </code>
+                </article>
+                <li>
+                    <h3>Python Strings</h3>
+                </li>
+                <article>
+                    <p>
+                        String is sequence of Unicode characters. We can use single quotes or double quotes to 
+                        represent strings. Multi-line strings can be denoted using triple quotes, <code>'''</code>
+                        or <code>"""</code>
+                    </p>
+                    <code>
+                        s = "This is a string" <br>
+                        print(s) <br>
+                        s = '''A multiline <br>
+                        string''' <br>
+                        print(s)
+                    </code>
+                    <h4>Output</h4>
+                    <code>
+                        This is a string <br>
+                        A multiline <br>
+                        string
+                    </code>
+                    <p>
+                        Just like a list and tuple, the slicing operator <code>[ ]</code>can be used with strings. Strings, 
+                        however, are immutable.
+                    </p>
+                </article>
+                <code>
+                    s = 'Hello world!'
+
+                    # s[4] = 'o'
+                    print("s[4] = ", s[4])
+
+                    # s[6:11] = 'world'
+                    print("s[6:11] = ", s[6:11])
+
+                    # Generates error
+                    # Strings are immutable in Python
+                    s[5] ='d'
+                </code>
+                <h4>Output</h4>
+                <code>
+                    s[4] =  o <br>
+                    s[6:11] =  world <br>
+                    Traceback (most recent call last): <br>
+                      File &#10092;"string"&#10093;, line 11, in &#10092;module&#10093; <br>
+                    TypeError: 'str' object does not support item assignment
+                </code>
+                <li><h3>Python Set</h3></li>
+                <article>
+                   <p>
+                    Set is an unordered collection of unique items. Set is defined by values separated by comma
+                    inside braces <code>{}</code>.Items in a set are not ordered.
+                   </p> 
+                   <code>
+                    a = {5,2,3,1,4} <br>
+                    <br> 
+                    # printing set variable <br>
+                    print("a = ", a) <br>
+                    <br>
+                    # data type of variable a <br>
+                    print(type(a))
+                   </code>
+                   <h4>Output</h4>
+                   <code>
+                    a =  {1, 2, 3, 4, 5} <br>
+                    &#10092;class 'set'&#10093;                    
+                   </code>
+                   <p>
+                    We can perform set operations like union, intersection on two sets. Sets have unique values.
+                     They eliminate duplicates.
+                   </p>
+                   <code>
+                    a = {1,2,2,3,3,3} <br>
+                    print(a)
+                   </code>
+                   <h4>Output</h4>
+                   <code>
+                        {1, 2, 3}
+                    </code>
+                    <p>
+                        Since, set are unordered collection, indexing has no meaning. Hence, the slicing operator
+                        <code>[]</code> does not work.
+                    </p>
+                    <code>
+                        >>> a = {1,2,3} <br>
+                        >>> a[1] <br>
+                        Traceback (most recent call last): <br>
+                          File " &#10092;string&#10093;", line 301, in runcode <br>
+                          File " &#10092;interactive input&#10093;", line 1, in  &#10092;module&#10093; <br>
+                        TypeError: 'set' object does not support indexing                        
+                    </code>
+                </article>
+                <li><h3>Python Dictionary</h3></li>
+                <p>Dictionary is an unordered collection of key-value pairs.</p>
+                <p>
+                    It is generally used when we have a huge amount of data. Dictionaries are optimized for 
+                    retrieving data. We must know the key to retrieve the value.
+                </p>
+                <p>
+                    In Python, dictionaries are defined within braces <code>{}</code> with each item being a pair in the form
+                    <code>key:value</code>.Key and value can be of any type.
+                </p>
+                <code>
+                    >>> d = {1:'value','key':2} <br>
+                    >>> type(d) <br>
+                    &#10092;class 'dict'&#10093;
+                </code>
+                <p>We use key to retrieve the respective value. But not the other way around.</p>
+                <code>
+                    d = {1:'value','key':2} <br>
+                    print(type(d)) <br>
+                    <br>
+                    print("d[1] = ", d[1]); <br>
+                    <br>
+                    print("d['key'] = ", d['key']); <br>
+                    <br>
+                    # Generates error <br>
+                    print("d[2] = ", d[2]);
+                </code>
+                <h4>Output</h4>
+                <code>
+                    &#10092;class 'dict'&#10093; <br>
+                        d[1] =  value <br>
+                        d['key'] =  2 <br>
+                        Traceback (most recent call last): <br>
+                          File "&#10092;string&#10093;", line 9, in &#10092;module&#10093;
+                        KeyError: 2
+                </code>
+            </ul>
         </section>
     </main>
 </body>
