@@ -14,8 +14,7 @@
             <li><a href="#hello-world">Hello World</a></li>
             <li><a href="#variable">Variables</a></li>
             <li><a href="#data-type">Data Type</a></li>
-            <li><a href="">if else</a></li>
-            <li><a href="">Loop</a></li>
+            <li><a href="#else-if">if else</a></li>
         </ul>
     </nav>
     <main id="main-doc">
@@ -375,6 +374,55 @@
                         KeyError: 2
                 </code>
             </ul>
+        </section>
+        <section class="main-section" id="else-if">
+            <header>
+                <h1>Else If statement</h1>
+            </header>
+            <article>
+                <p>
+                    Decision making is required when we want to execute a code only if a certain condition is satisfied.
+                </p>
+                <p>
+                    The <code>if…elif…else</code>  statement is used in Python for decision making.
+                </p>
+                <h4>Python if Statement Syntax</h4>
+                <code>
+                    if test expression: <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;statement(s)
+                </code>
+                <p>
+                    Here, the program evaluates the <code>test expression</code> and will execute statement(s) 
+                    only if the test expression is <code>True</code>.
+                </p>
+                <p>
+                    If the test expression is <code>False</code>,the statement(s) is not executed. 
+                </p>
+                <p>
+                    In Python, the body of the <code>if</code> statement is indicated by the indentation. The body 
+                    starts with an indentation and the first unindented line marks the end.
+                </p>
+                <p>
+                    Python interprets non-zero values as <code>True</code>.<code>None</code> and <code>0</code>
+                    are interpreted as <code>False</code>.
+                </p>
+                <h4>
+                    Example: Python if Statement
+                </h4>
+                <code>     
+                    # If the number is positive, we print an appropriate message <br>
+                    <br>
+                    num = 3 <br>
+                    if num > 0: <br>
+                    print(num, "is a positive number.") <br>
+                    print("This is always printed.") <br>
+                    <br>
+                    num = -1 <br>
+                    if num > 0: <br>
+                    print(num, "is a positive number.") <br>
+                    print("This is also always printed.")
+                </code>
+            </article>
         </section>
     </main>
 </body>
