@@ -1,4 +1,4 @@
-html {
+* {
     margin: 0;
     padding: 0;
 }
@@ -7,6 +7,8 @@ body {
     display: flex;
     justify-content: space-between;
     text-align: justify;
+    line-height: 1.8em;
+    background-color: #ddd;
 }
 
 #nav-bar {
@@ -15,19 +17,39 @@ body {
     height: 100%;
     position: fixed;
     left: 0;
-    padding: 0 20px 20px 10px;
     box-sizing: border-box;
+    background-color: deepskyblue;
+    color: cornsilk;
+    border-right: 2px solid black;
+}
+
+#nav-bar header h1{
+    font-size: 1.7em;
 }
 
 #nav-bar li {
-    margin: 40% auto;
+    display: flex;
+    margin: 28% auto 28% 0;
+    font-size: 1.5em;
+    list-style: none;
+    border-top: 1px solid white;
 }
 
-#nav-bar li:first-child{
-    margin: 10% auto 40% auto;
+#nav-bar li a{
+    text-decoration: none;
+    margin-left: 20px;
+    color: inherit;
+}
+
+#nav-bar li a:hover {
+    color: yellow;
+    font-size: 1.6em;
+    transition: 0.5s;
 }
 
 #main-doc {
     width: 80%;
-    margin-left: 22%;
+    margin-left: 24%;
+    padding: 20px;
+    box-sizing: border-box;
 }
