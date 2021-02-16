@@ -2,3 +2,32 @@ html {
     margin: 0;
     padding: 0;
 }
+
+body {
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+}
+
+#nav-bar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    padding: 0 20px 20px 10px;
+    box-sizing: border-box;
+}
+
+#nav-bar li {
+    margin: 40% auto;
+}
+
+#nav-bar li:first-child{
+    margin: 10% auto 40% auto;
+}
+
+#main-doc {
+    width: 80%;
+    margin-left: 22%;
+}
