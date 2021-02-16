@@ -53,3 +53,14 @@ body {
     padding: 20px;
     box-sizing: border-box;
 }
+.main-section {
+    margin-top: 30px;
+}
+
+.main-section:first-child {
+    margin-top: 10px;
+}
+
+.main-section header {
+    margin-bottom: 15px;
+}
