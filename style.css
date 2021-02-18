@@ -11,40 +11,42 @@ body {
     background-color: #ddd;
 }
 
-#nav-bar {
+#navbar {
     display: flex;
-    flex-direction: column;
-    height: 100%;
     position: fixed;
-    left: 0;
+    top: 0;
     box-sizing: border-box;
     background-color: deepskyblue;
     color: cornsilk;
-    border-right: 2px solid black;
+    width: 100%;
+    font-size: 1em;
 }
 
-#nav-bar header h1{
-    font-size: 1.7em;
+#navbar header {
+    
 }
 
-#nav-bar li {
+#navbar ul {
     display: flex;
-    margin: 28% auto 28% 0;
-    font-size: 1.5em;
-    list-style: none;
-    border-top: 1px solid white;
+    height: 40px;
+    margin: auto;
 }
 
-#nav-bar li a{
+#navbar li {
+    list-style: none;
+}
+
+#navbar li a{
     text-decoration: none;
     margin-left: 20px;
     color: inherit;
 }
 
-#nav-bar li a:hover {
+#navbar li a:hover {
     color: yellow;
-    font-size: 1.6em;
+    font-size: 20px;
     transition: 0.5s;
+    box-sizing: border-box;
 }
 
 #main-doc {
@@ -58,9 +60,38 @@ body {
 }
 
 .main-section:first-child {
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .main-section header {
     margin-bottom: 15px;
+}
+
+/* Responsive */
+@media screen and (min-width: 768px){
+    #navbar {
+        flex-direction: column;
+        height: 100%;
+        font-size: 1.2em;
+        width: 22%;
+        border-right: 2px solid black;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    #navbar li {
+        border-top: 1px solid white;
+        margin: 15% auto 15% 0;
+    }
+
+    #navbar li a:hover {
+        font-size: 1.5em;
+    }
+
+    .main-section:first-child {
+        margin-top: 10px;
+    }
 }
